@@ -1,0 +1,5 @@
+/.vscode
+tweets.json
+.deployment
+/__pycache__
+/__pycache__/*
