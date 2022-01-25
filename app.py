@@ -6,18 +6,31 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# queries = {'1': 'remote developer hiring', '2': 'remote intern hiring'}
+
+@app.route('/',methods=["GET"])
+def home():
+    return "Hello World!!\nThis is an API to get anything you serach from twitter\n add /search/< anything you want to search >"
+
 
 @app.route('/search',methods=["GET"])
-def search():
-    query = "remote developer hiring"
+def dev_search():
+    query = "remote developer jobs hiring"
     scrape(query)
 
     with open('tweets.json') as json_file:
         data = json.load(json_file)
 
     return jsonify(data)
-    # return jsonify({"1":"@#$","2":"wesdrfa"})
+
+@app.route('/search/<string:query>',methods=["GET"])
+def search(query):
+    scrape(query)
+
+    with open('tweets.json') as json_file:
+        data = json.load(json_file)
+
+    return jsonify(data)
+
 
 
 if __name__ == "__main__":
