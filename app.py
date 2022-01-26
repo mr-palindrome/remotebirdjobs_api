@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from newscrap import scrape
 import json
 from flask_cors import CORS
@@ -9,10 +9,10 @@ CORS(app)
 
 @app.route('/',methods=["GET"])
 def home():
-    return "Hello World!!\nThis is an API to get anything you serach from twitter\n add /search/< anything you want to search >"
+    return render_template("index.html")
 
 
-@app.route('/search',methods=["GET"])
+@app.route('/twitter/search',methods=["GET"])
 def dev_search():
     query = "remote developer jobs hiring"
     scrape(query)
@@ -22,7 +22,7 @@ def dev_search():
 
     return jsonify(data)
 
-@app.route('/search/<string:query>',methods=["GET"])
+@app.route('/twitter/search/<string:query>',methods=["GET"])
 def search(query):
     scrape(query)
 
