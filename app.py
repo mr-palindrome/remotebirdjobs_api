@@ -12,7 +12,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/twitter/search',methods=["GET"])
+@app.route('/search',methods=["GET"])
 def dev_search():
     query = "remote developer jobs hiring"
     scrape(query)
@@ -22,7 +22,7 @@ def dev_search():
 
     return jsonify(data)
 
-@app.route('/twitter/search/<string:query>',methods=["GET"])
+@app.route('/search/<string:query>',methods=["GET"])
 def search(query):
     scrape(query)
 
