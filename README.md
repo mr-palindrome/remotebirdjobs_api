@@ -1,11 +1,10 @@
 # remotebirdjobs_api
  
 ## Inspiration
-The number of jobs opportunities for remote as well as local opportunities is very huge but finding them for a single person is a very difficult task. Hence, we made **Remote Bird Jobs**.
+The quantity of job options, both distant and local, is enormous, but discovering them for a single person is quite tough. As a result, we created **Remote Bird Jobs**.
 
 ## What it does
-Remote Bird Jobsis a rest API which **scrapes hiring tweets or any kind of tweets from Twitter ** making the task of finding a tweets very easy. The current version works for Twitter but it can function on other websites also.
-I made this for a hackathon and submitted it with my team in devpost. I made thsi focussing on finding **Remote Job Oppurtunity on Twitter**
+Remote Bird Jobs is a REST API that scrapes hiring tweets or any other type of tweets from Twitter, making the process of finding a tweet a breeze. The current version is optimized for Twitter, but it can also be used on other websites. I created this for a hackathon and submitted it to devpost with my team. I created this with the goal of locating remote job opportunities on Twitter.
 
 ## What I learned
 I learned to scrape tweets and creating a Rest API.
